@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
-
+using System.Collections.Generic;
 
 namespace ServerPing
 {
@@ -12,7 +9,7 @@ namespace ServerPing
     {
         static void Main(string[] args)
         {
-            //List<string> ips = new List<string>();
+            
             var ips = ConfigurationManager.AppSettings["lips"];
             List<string> Lista_Ip = ips.Split('|').ToList();
 

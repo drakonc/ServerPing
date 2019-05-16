@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.NetworkInformation;
 using System.IO;
+using System.Collections.Generic;
+using System.Net.NetworkInformation;
 
 namespace ServerPing
 {
@@ -45,7 +42,6 @@ namespace ServerPing
             }
 
         }
-
 
         public List<string> SimplePing(string ip)
         {
