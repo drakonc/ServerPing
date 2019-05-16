@@ -13,17 +13,18 @@ namespace ServerPing
         static void Main(string[] args)
         {
             //List<string> ips = new List<string>();
-            var ips = ConfigurationSettings.AppSettings["lips"];
+            var ips = ConfigurationManager.AppSettings["lips"];
             List<string> Lista_Ip = ips.Split('|').ToList();
-
-            //Lista_Ip.ForEach(a =>
-            //{
-            //    Console.WriteLine(a);
-            //});
-            //Console.ReadLine();
 
             clPing p = new clPing();
             p.EscribirArchivo(Lista_Ip);
+
+            Lista_Ip.ForEach(ip =>
+            {
+                Console.WriteLine(ip);
+            });
+
+            Console.ReadLine();
 
         }
     }
